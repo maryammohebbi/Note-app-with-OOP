@@ -16,6 +16,10 @@ const view = new NotesView(app, {
 
     onNoteSelect(noteId){
         console.log(noteId);
+    },
+
+    onNoteDelete(noteId){
+        console.log(noteId);
     }
 });
 
