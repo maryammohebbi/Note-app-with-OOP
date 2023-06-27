@@ -27,8 +27,8 @@ export default class App{
         return {
             onNoteAdd: () => {
                 const newNote = {
-                    title: "عنوان جدید",
-                    body: "چیزی بنویسید ..."
+                    title: "",
+                    body: ""
                 }
                 NotesAPI.saveNote(newNote);
                 this._refreshNotes();
@@ -50,9 +50,10 @@ export default class App{
             },
         
             onNoteDelete: (noteId) => {
-                // console.log(noteId);
-            }
-        }
+                NotesAPI.deleteNote(noteId);
+                this._refreshNotes();
+            },
+        };
 
     }
 }

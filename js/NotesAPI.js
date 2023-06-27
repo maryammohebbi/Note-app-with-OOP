@@ -1,24 +1,24 @@
-const notes =[  
-    {
-        id: 1,
-        title: "first note",
-        body: "some dummy text ... first",
-        updated: "2023-03-14T18:24:01.4117",
-    },
-    {
-        id: 2,
-        title: "second note",
-        body: "some dummy text... second",
-        updated: "2023-04-19T15:03:23.556Z",
-    },
+// const notes =[  
+//     {
+//         id: 1,
+//         title: "first note",
+//         body: "some dummy text ... first",
+//         updated: "2023-03-14T18:24:01.4117",
+//     },
+//     {
+//         id: 2,
+//         title: "second note",
+//         body: "some dummy text... second",
+//         updated: "2023-04-19T15:03:23.556Z",
+//     },
 
-    {
-        id: 3,
-        title: "third note",
-        body: "some dummy text ... third",
-        updated: "2023-04-19T02:32:36.154Z" ,
-    },
-];
+//     {
+//         id: 3,
+//         title: "third note",
+//         body: "some dummy text ... third",
+//         updated: "2023-04-19T02:32:36.154Z" ,
+//     },
+// ];
 
 
 export default class NotesAPI{
@@ -51,7 +51,7 @@ export default class NotesAPI{
 
     static deleteNote(id){
         const notes = NotesAPI.getAllNotes();
-        const filteredNotes = notes.filter((n) => n.id !== id);
+        const filteredNotes = notes.filter((n) => n.id != id);
         localStorage.setItem("notes-app", JSON.stringify(filteredNotes));
     }
     
