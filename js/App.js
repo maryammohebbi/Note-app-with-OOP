@@ -26,7 +26,6 @@ export default class App{
     _handlers(){
         return {
             onNoteAdd: () => {
-                // console.log("note's been added !");
                 const newNote = {
                     title: "عنوان جدید",
                     body: "چیزی بنویسید ..."
@@ -36,7 +35,12 @@ export default class App{
             },
         
             onNoteEdit: (newTitle, newBody) => {
-                // console.log(newTitle, newBody);
+                NotesAPI.saveNote({
+                    id: this.activeNote.id,
+                    title: newTitle,
+                    body: newBody,
+                })
+                this._refreshNotes();
             },
         
             onNoteSelect: (noteId) => {

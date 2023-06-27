@@ -32,7 +32,7 @@ export default class NotesView{
             inputField.addEventListener("blur", ()=>{
                 const newBody = inputBody.value.trim();
                 const newTitle = inputTitle.value.trim();
-                this.onNoteEdit(newBody, newTitle);
+                this.onNoteEdit(newTitle, newBody);
             })
         });
         

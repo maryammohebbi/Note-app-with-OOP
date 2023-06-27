@@ -56,18 +56,3 @@ export default class NotesAPI{
     }
     
 }
-
-// console.log(NotesAPI.saveNote(
-    
-    //         {
-        //             id: 1,
-        //             title: "first note-edited",
-        //             body: "some dummy text ... first-edited",
-        //             updated: "2023-03-14T18:24:01.4117",
-        //         }   
-        // ));
-        
-        
-// console.log(NotesAPI.getAllNotes());
-        
-// console.log(NotesAPI.deleteNote(2));
